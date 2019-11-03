@@ -20,12 +20,15 @@
 
 
 @section('js')
+    @parent
     <script>
         $(function () {
             $('[name=url]:first').change(function () {
-                var $input = $(this);
-                alert($input.val());
+                var $input = $(this).val();
+                if($input.substr(0,7)!=='http://' || $input.substr(0,8)!=='https://'){
+                    $(this).val('http://'+$input);
+                }
             })
         });
     </script>
-@endsection
+@append

@@ -42,6 +42,7 @@
 @section('js')
     <script>
         $(function () {
+
             $('.datatable').DataTable({
                 'paging': true,
                 'lengthChange': false,
