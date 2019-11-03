@@ -64,7 +64,6 @@
             $("#myModal").on("show.bs.modal", function(e) {
                 $(this).find(".modal-content").html('');
                 var link = $(e.relatedTarget);
-                alert(link.attr("href"));
                 $(this).find(".modal-content").load(link.attr("href"));
             });
         })
